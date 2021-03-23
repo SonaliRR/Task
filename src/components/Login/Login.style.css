@@ -1,0 +1,14 @@
+.login{
+    margin:100px 350px;
+    background-color: rgb(235, 230, 230);
+    padding: 40px;
+}
+.submitbtn{
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .login{
+        margin:30px 30px;
+    }
+  }
