@@ -1,12 +1,19 @@
 .App {
   text-align: center;
 }
+.navbar{
+text-align: right;
+}
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.btn{
+  padding: 10px;
+  margin: 5px;
+ 
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
