@@ -40,10 +40,13 @@ import './App.css';
 import Login from './components/Login/Login';
 import 'devextreme/dist/css/dx.common.css';
 import 'devextreme/dist/css/dx.light.css';
+import Registration from './components/Registration/Registration';
 function App() {
   return (
     <div className="App">
+        <Registration></Registration>
   <Login/>
+
     </div>
   );
 }

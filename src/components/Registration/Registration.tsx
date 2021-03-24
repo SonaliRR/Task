@@ -7,6 +7,9 @@ import Form, {
 } from 'devextreme-react/form';
 import { Button } from 'devextreme-react/button';
 import './Registration.style.css';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 const employee={
     email: '',
@@ -17,6 +20,10 @@ function Registration() {
     return (
         <div className="registration"> 
         <h2>Registration</h2>
+
+        <FacebookIcon className="icons"/>
+        <TwitterIcon className="icons" />
+        <InstagramIcon className="icons" />
             <Form formData={employee} labelLocation="top" alignItemLabels>
                 
             <SimpleItem dataField="name">
