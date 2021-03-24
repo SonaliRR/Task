@@ -11,22 +11,22 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 
-const employee={
+const employee = {
     email: '',
     password: ''
 };
 function Registration() {
-   
-    return (
-        <div className="registration"> 
-        <h2>Registration</h2>
 
-        <FacebookIcon className="icons"/>
-        <TwitterIcon className="icons" />
-        <InstagramIcon className="icons" />
+    return (
+        <div className="registration">
+            <h2>Registration</h2>
+
+            <FacebookIcon className="icons" />
+            <TwitterIcon className="icons" />
+            <InstagramIcon className="icons" />
             <Form formData={employee} labelLocation="top" alignItemLabels>
-                
-            <SimpleItem dataField="name">
+
+                <SimpleItem dataField="name">
                     <RequiredRule
                         message="Name is required"
                     />
@@ -34,10 +34,10 @@ function Registration() {
                         pattern="^[a-zA-Z]+$"
                         message="Please enter valid name"
                     />
-                     <Label
+                    <Label
                         alignment="left" />
                 </SimpleItem>
-                
+
                 <SimpleItem dataField="mobile">
                     <RequiredRule
                         message="Mobile no is required"
@@ -46,7 +46,7 @@ function Registration() {
                         pattern="^[7-9]{1}[0-9]{9}$"
                         message="Please enter valid mobile number "
                     />
-                         <Label
+                    <Label
                         alignment="left" />
                 </SimpleItem>
 
@@ -58,7 +58,7 @@ function Registration() {
                         pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                         message="Please enter valid email id"
                     />
-                         <Label
+                    <Label
                         alignment="left" />
                 </SimpleItem>
 
@@ -70,7 +70,7 @@ function Registration() {
                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
                         message="Please enter valid password"
                     />
-                         <Label
+                    <Label
                         alignment="left" />
                 </SimpleItem>
 
@@ -82,16 +82,16 @@ function Registration() {
                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
                         message="Please enter valid password"
                     />
-                         <Label
+                    <Label
                         alignment="left" />
                 </SimpleItem>
             </Form>
 
             <Button
-            className="submitbtn"
+                className="submitbtn"
                 text="Submit"
                 type='success'
-                />
+            />
         </div>
     )
 }

@@ -1,54 +1,36 @@
-
-// import "./App.css";
-// import React from "react";
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-// import { Navbar, Nav } from "react-bootstrap";
-// import { Button, Form, FormControl } from "react-bootstrap";
-// import Login from '../src/components/Login/Login';
-// import Registration from '../src/components/Registration/Registration';
-
-
-// function App({ match }) {
-//   return (
-//     <div className="App">
-//       <Router>
-//         <Navbar className="navhead justify-content-between">
-//           <Form inline></Form>
-//           <Form inline>
-//             <Button variant="danger"> <Link to="/login"> <span className="mycolor1" >Login</span></Link></Button>
-//             <Button   className="registerbtn" variant="info"><Link to="/registeration"> <span className="mycolor" >Register </span></Link></Button>{' '}
-//           </Form>
-//         </Navbar>
-
-//         <Route path="/login" render={(props) => <Login {...props} />}></Route>
-
-//         <Route
-//           path="/registeration"
-//           render={(props) => <Registeration {...props} />}
-//         ></Route>
-
-//       </Router>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Login from './components/Login/Login';
+import * as React from 'react'
+import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import { render } from 'react-dom';
+import Login from '../src/components/Login/Login';
 import 'devextreme/dist/css/dx.common.css';
 import 'devextreme/dist/css/dx.light.css';
 import Registration from './components/Registration/Registration';
+import { Button } from 'devextreme-react/button';
+import './App.css'
+
 function App() {
-  return (
-    <div className="App">
-        <Registration></Registration>
-  <Login/>
+    return (
+      <Router>
+        <div>
+          <nav className="navbar">
+          <Button
+                className="btn"
+                type='success'
+            >  <Link to="/">Login</Link></Button>
+          
+          <Button
+                className="btn"
+                type='success'
+            > <Link to="/registration">Registration</Link></Button>
+          </nav>
+          <Switch>
+            <Route exact path="/" component={Login} />
+            <Route exact path="/registration" component={Registration} />
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
+  export default App;
 
-    </div>
-  );
-}
 
-export default App;
