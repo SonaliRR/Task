@@ -10,13 +10,23 @@ import './Login.style.css';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import { useHistory } from "react-router";
 
 const employee={
     email: '',
     password: ''
 };
+
+
+
 function Login() {
-   
+    let history = useHistory();
+
+    const handleClick = () => {
+        history.push({
+            pathname: "/welcome",
+          });
+     }
     return (
         <div className="login"> 
         <h2>Login</h2>
@@ -58,6 +68,7 @@ function Login() {
             className="submitbtn"
                 text="Submit"
                 type='success'
+                onClick={handleClick}
                 />
         </div>
     )
