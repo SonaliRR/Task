@@ -5,11 +5,17 @@ import Login from '../src/components/Login/Login';
 import 'devextreme/dist/css/dx.common.css';
 import 'devextreme/dist/css/dx.light.css';
 import Registration from './components/Registration/Registration';
+import Welcome from '../src/components/Welcome/Welcome';
 import { Button } from 'devextreme-react/button';
 import './App.css'
 
+
+
+
+
 function App() {
     return (
+      <>
       <Router>
         <div>
           <nav className="navbar">
@@ -26,9 +32,12 @@ function App() {
           <Switch>
             <Route exact path="/" component={Login} />
             <Route exact path="/registration" component={Registration} />
+            <Route exact path="/welcome" component={Welcome} />
           </Switch>
         </div>
       </Router>
+
+      </>
     );
   }
   export default App;
